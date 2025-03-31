@@ -10,6 +10,8 @@ body {
     line-height: 1.6;
     color: #000;
     background-color: #fff;
+    /* Debug border - remove after verification */
+    border: 1px solid rgba(255,0,0,0.1);
 }
 
 /* Header Styles */
@@ -28,20 +30,8 @@ nav ul {
     justify-content: center;
     gap: 2rem;
     padding: 0 2rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #000;
-    font-weight: bold;
-    font-size: 1.1rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.3s ease;
-}
-
-nav a:hover, nav li.active a {
-    background-color: #f0f0f0;
-    border-radius: 4px;
+    margin: 0 auto;
+    max-width: 1200px;
 }
 
 /* Main Content Styles */
@@ -49,50 +39,39 @@ main {
     max-width: 1200px;
     margin: 2rem auto;
     padding: 0 2rem;
+    /* Debug border - remove after verification */
+    border: 1px solid rgba(0,255,0,0.1);
 }
 
-.hero {
-    text-align: center;
-    padding: 2rem 0;
-}
-
-/* Singer Photo - 3x Larger */
+/* Singer Photo - Centered Fix */
 .singer-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 3rem auto;
     width: 900px;
     max-width: 100%;
+    /* Debug background - remove after verification */
+    background-color: rgba(0,0,255,0.05);
 }
 
 .singer-photo img {
+    display: block;
     width: 100%;
     height: auto;
+    max-width: 900px;
+    margin: 0 auto;
     border-radius: 4px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    /* Debug outline - remove after verification */
+    outline: 2px dashed rgba(255,0,0,0.5);
 }
 
-/* Text Styles */
-.hero h1 {
-    font-size: 3rem;
-    margin: 2rem 0;
-    color: #333;
-}
-
-/* Footer Styles */
-footer {
-    text-align: center;
-    padding: 2rem;
-    margin-top: 3rem;
-    border-top: 1px solid #eee;
-}
-
-/* Responsive Design */
+/* Responsive Adjustments */
 @media (max-width: 1000px) {
     .singer-photo {
-        width: 700px;
-    }
-    
-    .hero h1 {
-        font-size: 2.5rem;
+        width: 100%;
+        padding: 0 2rem;
     }
 }
 
@@ -100,24 +79,5 @@ footer {
     nav ul {
         flex-direction: column;
         gap: 1rem;
-    }
-    
-    .singer-photo {
-        width: 100%;
-        padding: 0 1rem;
-    }
-    
-    .hero h1 {
-        font-size: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 1.8rem;
-    }
-    
-    nav a {
-        font-size: 1rem;
     }
 }
