@@ -1,182 +1,123 @@
-/* About Page Styles */
-.about-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 2rem;
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.about-container h1 {
-    text-align: center;
-    font-size: 2.2rem;
-    margin-bottom: 1rem;
-    color: #000;
-}
-
-.notice {
-    text-align: center;
-    font-style: italic;
-    margin-bottom: 2rem;
-    color: #555;
-}
-
-.about-section {
-    background-color: #f8f8f8;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.about-section h2 {
-    color: #000;
-    border-bottom: 2px solid #555;
-    padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
-}
-
-.about-section h3 {
-    color: #333;
-    margin: 1.5rem 0 1rem;
-}
-
-.pricing {
-    background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 6px;
-    margin-bottom: 2rem;
-    border-left: 4px solid #555;
-}
-
-.pricing h4 {
-    margin: 1rem 0 0.5rem;
-    color: #222;
-}
-
-.contact-info {
-    font-weight: bold;
-    margin-top: 1rem;
-}
-
-.bio h4 {
-    margin: 1.5rem 0 0.5rem;
-    color: #222;
-}
-
-.bio p {
-    margin-bottom: 1rem;
-    line-height: 1.7;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-container {
-        padding: 0 1rem;
-    }
-    
-    .about-section {
-        padding: 1.5rem;
-    }
-}
-/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #000; /* Black text */
-    background-color: #fff; /* White background */
+    color: #000;
+    background-color: #fff;
 }
 
+/* Header Styles */
 header {
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
+    padding: 1rem 0;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    padding: 1rem 0;
-    margin: 0;
-}
-
-nav li {
-    margin: 0 1rem;
+    gap: 2rem;
+    padding: 0 2rem;
 }
 
 nav a {
     text-decoration: none;
-    color: #000; /* Black text */
+    color: #000;
     font-weight: bold;
+    font-size: 1.1rem;
     padding: 0.5rem 1rem;
     transition: all 0.3s ease;
 }
 
 nav a:hover, nav li.active a {
-    color: #fff;
-    background-color: #555; /* Dark gray instead of purple */
+    background-color: #f0f0f0;
     border-radius: 4px;
 }
 
-/* Simplified Singer Photo */
-.singer-photo {
-    margin: 20px auto;
-    max-width: 400px;
+/* Main Content Styles */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.hero {
     text-align: center;
+    padding: 2rem 0;
+}
+
+/* Singer Photo - 3x Larger */
+.singer-photo {
+    margin: 3rem auto;
+    width: 900px;
+    max-width: 100%;
 }
 
 .singer-photo img {
     width: 100%;
     height: auto;
-    display: block;
-    border: none; /* Remove any border */
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
-/* Content Sections */
-.hero {
-    text-align: center;
-    padding: 2rem 0;
-    background-color: transparent; /* No purple background */
-    margin-bottom: 2rem;
-}
-
+/* Text Styles */
 .hero h1 {
-    font-size: 2.5rem;
-    margin: 20px 0 10px;
-    color: #000; /* Black text */
+    font-size: 3rem;
+    margin: 2rem 0;
+    color: #333;
 }
 
-.updates, .cta {
-    background-color: #f8f8f8; /* Light gray background */
+/* Footer Styles */
+footer {
+    text-align: center;
     padding: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-}
-
-.qr-code {
-    max-width: 200px;
-    margin: 1rem auto;
-    display: block;
+    margin-top: 3rem;
+    border-top: 1px solid #eee;
 }
 
 /* Responsive Design */
+@media (max-width: 1000px) {
+    .singer-photo {
+        width: 700px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
-        align-items: center;
+        gap: 1rem;
     }
     
-    nav li {
-        margin: 0.5rem 0;
+    .singer-photo {
+        width: 100%;
+        padding: 0 1rem;
     }
     
     .hero h1 {
         font-size: 2rem;
     }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
     
-    .singer-photo {
-        max-width: 300px;
+    nav a {
+        font-size: 1rem;
     }
 }
