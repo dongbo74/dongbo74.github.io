@@ -59,7 +59,7 @@ footer {
 /* Home Page Specific Styles */
 .hero {
     text-align: center;
-    padding: 3rem 0;
+    padding: 2rem 0;
     background-color: #8e44ad;
     color: white;
     margin-bottom: 2rem;
@@ -69,6 +69,23 @@ footer {
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+}
+
+/* Angela's Photo Styles */
+.singer-photo {
+    margin: 0 auto 2rem;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid white;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.singer-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .updates {
@@ -107,26 +124,8 @@ footer {
     .hero h1 {
         font-size: 2rem;
     }
-}
 
-/* Add to your existing styles.css */
-.singer-photo {
-    text-align: center;
-    margin: 2rem 0;
-}
-
-.singer-photo img {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #8e44ad;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* For mobile responsiveness */
-@media (max-width: 768px) {
-    .singer-photo img {
+    .singer-photo {
         width: 200px;
         height: 200px;
     }
